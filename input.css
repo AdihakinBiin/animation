@@ -1,0 +1,77 @@
+body{
+  height: 60vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  font-family: sans-serif;
+  /* Photo by elizabeth lies on Unsplash */
+  background-image: url(backgroundImage.jpg);
+  /* Photo by elizabeth lies on Unsplash */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.form{
+  width: 50%;
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+}
+.form input{
+  width: 100%;
+  height: 100%;
+  color: cadetblue;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.form label{
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+}
+.form label::after{
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+height: 100%;
+border-bottom: 3px solid #5fa8d3;
+transform: translate(-100%);
+transition: transform 0.3s ease;
+
+}
+.content-name{
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+.form input:focus + .label-name .content-name,
+.form input:valid + .label-name .content-name{
+  transform: translateY(-150%);
+  font-size: 14px;
+  color: #5fa8d3;
+}
+.form input:focus + .label-name::after,
+.form input:valid + .label-name::after{
+  transform: translateX(0%);
+}
+
+
+.follow{
+  margin: 15px;
+}
+.contact-info .fab, .fa-phone, .fa-envelope{
+    margin: 13px;
+    color: #007bff;
+    font-weight: bold;
+    }
+
+
